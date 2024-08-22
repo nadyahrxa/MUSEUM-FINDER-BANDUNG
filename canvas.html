@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Landing Page | MBC Laboratory</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="container">
+          <div class="box-navbar">
+            <div class="logo">
+              <h1><img class=logo src="image/mbc logo.jpg"></h1>
+            </div>
+            <ul class="menu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="galery.html">Galery</a></li>
+              <li><a href="canvas.html">Grafik</a></li>
+              <li><a href="qgis2web_2024_08_23-04_01_36_145089/index.html">Map</a></li>
+              <li><a href="#developer">Developer</a></li>
+            </ul>
+            <i class="fa-solid fa-bars menu-bar"></i>
+          </div>
+        </div>
+      </div>
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Distribution of Museums in Bandung by Kecamatan</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+
+      <canvas id="museumChart" width="400" height="200"></canvas>
+  
+      <script>
+          // Data for the chart
+          const kecamatanLabels = [
+              "Sukajadi", 
+              "Astanaanyar", 
+              "Cidadap", 
+              "Regol", 
+              "Sumur Bandung", 
+              "Bandung Wetan", 
+              "Lengkong", 
+              "Bandung Kulon", 
+              "Coblong", 
+              "Cileunyi (Kabupaten Bandung)"
+          ];
+  
+          const museumData = [
+              2,  // Sukajadi
+              1,  // Astanaanyar
+              1,  // Cidadap
+              2,  // Regol
+              8,  // Sumur Bandung
+              2,  // Bandung Wetan
+              2,  // Lengkong
+              1,  // Bandung Kulon
+              1,  // Coblong
+              1   // Cileunyi (Kabupaten Bandung)
+          ];
+  
+          // Configuring the chart
+          const ctx = document.getElementById('museumChart').getContext('2d');
+          const museumChart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: kecamatanLabels,
+                  datasets: [{
+                      label: 'Number of Museums',
+                      data: museumData,
+                      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                      borderColor: 'rgba(75, 192, 192, 1)',
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                      y: {
+                          beginAtZero: true,
+                          title: {
+                              display: true,
+                              text: 'Number of Museums'
+                          }
+                      },
+                      x: {
+                          title: {
+                              display: true,
+                              text: 'Kecamatan'
+                          }
+                      }
+                  },
+                  plugins: {
+                      legend: {
+                          display: false
+                      },
+                      
+                  }
+              }
+          });
+      </script>
+  </body>
+  </html>
+
+     <!-- Developer -->
+     <div class="developer" id="developer">
+      <div class="container">
+        <div class="box-developer">
+          <div class="box">
+            <h2>Nadyah Rizky Amelia</h2>
+            <p> Teknik Telekomunikasi angkatan 2022
+             <br> Telkom University </p>
+          </div>
+          <div class="box">
+            <h3>Menu</h3>
+            <a href="home.html">Home</a>
+            <a href="galery.html">Galery</a>
+            <a href="canvas.html">Grafik</a>
+            <a href="qgis2web_2024_08_23-04_01_36_145089/index.html">Map</a>
+            <a href="#developer.html">Developer</a>
+          </div>
+          <div class="box">
+            <p>&copy; Copyright by <span>MBC LABORATORY</span> All Rights Reserved 2024, Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Developer -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
